@@ -1,43 +1,42 @@
 <!DOCTYPE html>
-<head>
-    <style>
-        .button {
-  background-color: #8a3f3f;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 6px 4px;
-  cursor: pointer;
-}
-        .center {
-          margin: 0;
-          position: absolute;
-          top: 30%;
-          left: 50%;
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-        }
-        .bg{
-          background: rgba(0, 0, 0, 0.7) url(791762.jpg);
-    background-size: cover;
-    background-blend-mode: darken;
-        }
-        </style>
-</head>
-<body >
-  <div class="bg"
-  style="background-color: aqua;">
- 
-  </div>
-    <h1 style="text-align:center">Welcome to To-Do website</h1>
-    <form method="get" action="signup.html">
-            <div class="center">
-        <button class="button" type="submit">Signup</button> &nbsp; <button class="button" type="submit">login</button>
-</div>
-    </form> 
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TodoList</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1> To-do List</h1>
+    </header>
+    <form>
+      <input type="text" class="todo-input" placeholder="Enter Your Task Here">
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+      <div class="select">
+        <select name="todos" class="filter-todo">
+          <option value="all">All Tasks</option>
+          <option value="completed">Completed</option>
+          <option value="uncompleted">Uncompleted</option>
+        </select>
+      </div>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
